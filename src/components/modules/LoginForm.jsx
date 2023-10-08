@@ -71,9 +71,14 @@ const LoginForm = () => {
           نام کاربری{" "}
         </label>
         <div
-          className={`border border-gray-dark ${
+          className={`border 
+          ${
+            errors.name && !touched.name && "border-gray-dark"
+          } 
+          ${
             !errors.name && touched.name && "border-secondary-main"
-          } ${
+          } 
+          ${
             errors.name && touched.name && "border-error-main"
           } rounded-[10px] w-full flex justify-end items-center p-3`}
         >
@@ -99,9 +104,14 @@ const LoginForm = () => {
           رمز عبور
         </label>
         <div
-          className={`border border-gray-dark ${
+          className={`border 
+          ${
+            errors.password && !touched.password && "border-gray-dark"
+          } 
+          ${
             !errors.password && touched.password && "border-secondary-main"
-          } ${
+          } 
+          ${
             errors.password && touched.password && "border-error-main"
           } rounded-[10px] w-full flex justify-end items-center p-3`}
         >
